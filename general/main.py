@@ -49,8 +49,8 @@ def save(solution):
 def main():
     (params, tab) = parse();
     print_parse(params, tab);
-    solve(params, tab);
-    solution = print_solve();
+    solution = solve(params, tab);
+    print_solve();
     save(solution);
 
 if __name__ == "__main__":
