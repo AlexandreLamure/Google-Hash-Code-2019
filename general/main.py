@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import sys
+import os
+import time
 from solve import *
 
 def parse():
@@ -32,16 +34,24 @@ def print_parse(params, tab):
     for line in tab:
         print(line)
 
-def save():
-    print('this is save')
+def save(solution):
+    returnString = "" #FIXME: shoud be filled with values of solution
+
+    if not os.path.exists("results"):
+        os.makedirs("results")
+    filename = "result_" + str(time.time()) + ".txt"
+    fichier = open("results/" + filename, "w")
+    fichier.write(returnString)
+    fichier.close()
+    print('Saving results to results/' + filename)
 
 
 def main():
     (params, tab) = parse();
     print_parse(params, tab);
     solve(params, tab);
-    print_solve();
-    save();
+    solution = print_solve();
+    save(solution);
 
 if __name__ == "__main__":
     main()

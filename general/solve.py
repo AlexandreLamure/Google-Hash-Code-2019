@@ -1,7 +1,16 @@
 # Solve the problem
 def solve(params, tab):
-    return True
+    solution = []
+
+    # FIXME: Write code here
+
+    return solution
+
 
 # To debug
 def print_solve():
-    print('lol')
+    print('-----------DEBUG-----------')
+
+    # FIXME: Write code here
+
+    print('---------------------------')
