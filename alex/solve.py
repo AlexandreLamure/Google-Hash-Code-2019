@@ -31,15 +31,15 @@ def solve(tab):
 
 
     while len(dodge_x) + 1 < len(sortant):
-        max_x = 0
-        max_y = 0
-        max_delta = 0
+        max_x = -1
+        max_y = -1
+        max_delta = -1
         for i in range(len(tab)):
             if i in dodge_x:
                 continue
-            maxi_y = 0
-            maxi = 0
-            maxi2 = 0
+            maxi_y = -1
+            maxi = -1
+            maxi2 = -1
             for j in range(len(tab)):
                 if big_table[i][j] == None:
                     continue
@@ -65,6 +65,7 @@ def solve(tab):
         big_table[sortant[max_x].end][sortant[max_x].begin] = None
 
         print(len(dodge_x) / len(sortant))
+        print(sortant[max_x].names)
         #done
 
 
@@ -73,7 +74,8 @@ def solve(tab):
     for i in range(len(sortant)):
         if i in dodge_x:
             continue
-        return '\n'.join(e for e in sortant[i].names)
+        print(sortant[i].names)
+        return sortant[i].names
 
 
 # To debug

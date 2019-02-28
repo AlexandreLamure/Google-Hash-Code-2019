@@ -24,9 +24,8 @@ def print_parse(tab):
 def save(solution):
     returnString = str(len(solution))
     returnString += '\n'
-    for slide in solution:
-        returnString += ' '.join(map(str, slide))
-        returnString += '\n'
+    for e in solution:
+        returnString += str(e) + '\n'
 
     if not os.path.exists("results"):
         os.makedirs("results")
