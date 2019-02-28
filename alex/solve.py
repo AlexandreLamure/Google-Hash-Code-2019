@@ -5,7 +5,9 @@ class slide_set:
         self.names = [name]
 
 # Solve the problem
-def solve(tab):
+def solve(tab2):
+
+    tab = tab2[:4000]
     for i in range(len(tab)):
         tab[i] = [i] + tab[i]
 
