@@ -1,3 +1,9 @@
+class slide_set:
+    def __init__(self, a, name):
+        self.begin = a
+        self.end = a
+        self.names = [name]
+
 # Solve the problem
 def solve(tab):
     for i in range(len(tab)):
@@ -19,9 +25,9 @@ def solve(tab):
     entrant = []
     sortant = []
     for i in range(len(tab)):
-        tupl = (i, i, [str(i)])
-        entrant.append(tupl)
-        sortant.append(tupl)
+        ss = slide_set(i, tab[i][0])
+        entrant.append(ss)
+        sortant.append(ss)
 
 
     while len(dodge_x) + 1 < len(sortant):
@@ -52,11 +58,11 @@ def solve(tab):
         dodge_x.add(max_x)
         dodge_y.add(max_y)
 
-        sortant[max_x][1] = entrant[max_y][1]
-        sortant[max_x][2] += entrant[max_y][2]
-        sortant[entrant[max_y][1]] = sortant[max_x]
+        sortant[max_x].end = entrant[max_y].end
+        sortant[max_x].names += entrant[max_y].names
+        sortant[entrant[max_y].end] = sortant[max_x]
 
-        big_table[sortant[max_x][1]][sortant[max_x][0]] = None
+        big_table[sortant[max_x].end][sortant[max_x].begin] = None
         #done
 
 
@@ -65,7 +71,7 @@ def solve(tab):
     for i in range(len(sortant)):
         if i in dodge_x:
             continue
-        return '\n'.join(e for e in sortant[i][2])
+        return '\n'.join(e for e in sortant[i].names)
 
 
 # To debug
