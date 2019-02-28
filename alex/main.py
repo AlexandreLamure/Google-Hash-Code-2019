@@ -38,7 +38,7 @@ def save(solution):
 
 def main():
     tab = parse();
-    print_parse(tab);
+    #print_parse(tab);
     solution = solve(tab);
     print_solve();
     save(solution);
