@@ -1,5 +1,5 @@
 # Solve the problem
-def solve(params, tab):
+def solve(tab):
     solution = []
 
     # FIXME: Write code here
