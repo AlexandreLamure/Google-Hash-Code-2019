@@ -37,10 +37,10 @@ def solve(tab):
             for j in range(len(tab)):
                 if j in dodge_y:
                     continue
-                if tab[i][j] > maxi:
+                if big_table[i][j] > maxi:
                     maxi2 = maxi
                     maxi_y = j
-                    maxi = tab[i][j]
+                    maxi = big_table[i][j]
             delta = maxi - maxi2
             if delta > max_delta:
                 max_x = i
