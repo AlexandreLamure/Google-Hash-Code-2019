@@ -63,6 +63,8 @@ def solve(tab):
         sortant[entrant[max_y].end] = sortant[max_x]
 
         big_table[sortant[max_x].end][sortant[max_x].begin] = None
+
+        print(len(dodge_x) / len(sortant))
         #done
 
 
