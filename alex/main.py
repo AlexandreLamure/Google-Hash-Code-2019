@@ -22,7 +22,11 @@ def print_parse(tab):
         print(line)
 
 def save(solution):
-    returnString = "" #FIXME: shoud be filled with values of solution
+    returnString = str(len(solution))
+    returnString += '\n'
+    for slide in solution:
+        returnString += ' '.join(map(str, slide))
+        returnString += '\n'
 
     if not os.path.exists("results"):
         os.makedirs("results")
