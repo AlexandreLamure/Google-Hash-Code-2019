@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+from solve import *
 
 def parse():
     filein = sys.argv[1] # get filename
@@ -31,12 +32,16 @@ def print_parse(params, tab):
     for line in tab:
         print(line)
 
+def save():
+    print('this is save')
+
+
 def main():
     (params, tab) = parse();
     print_parse(params, tab);
-    #solve(params, tab);
-    #print_solve();
-    #save();
+    solve(params, tab);
+    print_solve();
+    save();
 
 if __name__ == "__main__":
     main()
