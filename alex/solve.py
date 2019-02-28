@@ -35,6 +35,8 @@ def solve(tab):
             maxi = 0
             maxi2 = 0
             for j in range(len(tab)):
+                if big_table[i][j] == None:
+                    continue
                 if j in dodge_y:
                     continue
                 if big_table[i][j] > maxi:
