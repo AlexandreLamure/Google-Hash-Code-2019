@@ -6,8 +6,8 @@ class slide_set:
 
 # Solve the problem
 def solve(tab2):
-
-    tab = tab2[:4000]
+    #tab2.sort(key=lambda x: int(x[1]))
+    tab = tab2[:1000]
     for i in range(len(tab)):
         tab[i] = [i] + tab[i]
 
