@@ -25,7 +25,7 @@ def save(solution, score):
     returnString = str(len(solution))
     returnString += '\n'
     for e in solution:
-        returnString += str(e[i][0]) + '\n'
+        returnString += e[0] + '\n'
 
     if not os.path.exists("results"):
         os.makedirs("results")
